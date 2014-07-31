@@ -17,11 +17,15 @@
     		color: #52C2F0;
     		border-bottom: dashed 1px #52C2F0;
     	}
-    	p {
+    	div, p {
     		text-align: center;
     	}
+    	div {
+    		margin: 30px 0;
+    	}
     	p.slug {
-    		font-size: 50px;
+    		font-size: 40px;
+    		margin: 10px 0;
     	}
     	p.contact {
     		font-size: 18px;
@@ -34,11 +38,23 @@
     		background-image: url('img/identity.png');
     		background-repeat: no-repeat;
     	}
+    	.slide img {
+    		width: 320px;
+    	}
     </style>
 </head>
 <body>
 	<div class="identity"></div>
-  <p class="slug">Apps don't bring us together.<br/>Board games do.</p>
-  <p class="contact"><a href="mailto:founders@playprizm.com">founders[at]playprizm.com</a></p>
+	<div class="slide">
+		<p class="slug">Apps don't bring us together.</p>
+		<img src="img/apps.png"/>
+	</div>
+	<div class="slide">
+		<p class="slug">Board games do.</p>
+		<img src="img/board-games.png"/>
+	</div>
+	<div class="footer">
+  		<p class="contact"><a href="mailto:founders@playprizm.com">founders[at]playprizm.com</a></p>
+  	</div>
 </body>
 </html>
