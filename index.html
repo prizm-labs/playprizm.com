@@ -2,6 +2,7 @@
 <head>
 	<link rel="icon" href="favicon.ico">
     <title>PRIZM | Tabletop Gaming System</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <style>
     	body {
     		background: #2A2A2E;
@@ -20,19 +21,24 @@
     	div, p {
     		text-align: center;
     	}
-    	div {
+    	div.slide {
     		margin: 30px 0;
+    	}
+    	p {
+			margin: 10px 0;
     	}
     	p.slug {
     		font-size: 40px;
-    		margin: 10px 0;
+    	}
+    	p.cta {
+    		font-size: 24px;
     	}
     	p.contact {
     		font-size: 18px;
     	}
     	div.identity {
 
-    		margin: 50px auto 0 auto;
+    		margin: 50px auto;
     		height: 220px;
     		width: 185px;
     		background-image: url('img/identity.png');
@@ -41,10 +47,18 @@
     	.slide img {
     		width: 320px;
     	}
+    	.button-success {
+            background: rgb(28, 184, 65); /* this is a green */
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+        input.email {
+        	width: 272px;
+        }
     </style>
 </head>
 <body>
-	<div class="identity"></div>
 	<div class="slide">
 		<p class="slug">Apps don't bring us together.</p>
 		<img src="img/apps.png"/>
@@ -53,8 +67,39 @@
 		<p class="slug">Board games do.</p>
 		<img src="img/board-games.png"/>
 	</div>
-	<div class="footer">
-  		<p class="contact"><a href="mailto:founders@playprizm.com">founders[at]playprizm.com</a></p>
+
+	<div class="slide">
+		<p class="cta">So let's bring the best board games to the world!</p>
+
+		<!-- Begin MailChimp Signup Form -->
+<!--<link href="http://cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">-->
+<div id="mc_embed_signup">
+<form action="//playprizm.us8.list-manage.com/subscribe/post?u=6e88fa56ba96f005688a41d29&amp;id=d946e7ccbf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate pure-form" target="_blank" novalidate>
+	
+<fieldset>
+	<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_6e88fa56ba96f005688a41d29_d946e7ccbf" tabindex="-1" value=""></div>
+    <!--<label for="mce-EMAIL">Email Address </label>-->
+    <input type="email" value="" name="EMAIL" class="required email" placeholder="Your e-mail address" id="mce-EMAIL">   
+	<input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" class="button pure-button button-success">
+</fieldset>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div> 
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+	</div>
+
+	<div class="contact">
+  		<p class="contact"><a href="mailto:investors@playprizm.com">investors[at]playprizm.com</a></p>
   	</div>
+
+	<div class="identity"></div>
+
+	
 </body>
 </html>
