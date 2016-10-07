@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block custom_head %}
+<!-- Google Code for Email Signup Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 879126850;
+var google_conversion_language = "en";
+var google_conversion_format = "2";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "2fcHCOau6GoQwtKZowM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/879126850/?label=2fcHCOau6GoQwtKZowM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1105825709482879', {
+em: 'insert_email_variable,'
+});
+
+fbq('track', 'PageView');
+// fbq('track', 'Lead');
+// fbq('track', 'AddToCart');
+// fbq('track', 'InitiateCheckout');
+// fbq('track', 'Purchase', {value: '0.00', currency: 'USD'});
+fbq('track', 'CompleteRegistration');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1105825709482879&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+{% endblock %}
+
+{% block body %}
+<script>mixpanel.track("signup",{"email":"example@text.com"});</script>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Thanks for subscribing to our email list!</h1>
+  </div>
+</div>
+{% endblock %}
