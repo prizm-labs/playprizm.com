@@ -1,0 +1,21 @@
+{
+  "name": "browser-cookies",
+  "main": "src/browser-cookies.js",
+  "version": "1.0.8",
+  "homepage": "https://github.com/voltace/browser-cookies",
+  "authors": [
+    "Voltace <support@voltace.com>"
+  ],
+  "description": "Tiny cookies library for the browser",
+  "keywords": [
+    "cookies",
+    "cookie",
+    "client"
+  ],
+  "moduleType": "node",
+  "license": "Unlicense",
+  "ignore": [
+    "**/*",
+    "!src/browser-cookies.js"
+  ]
+}

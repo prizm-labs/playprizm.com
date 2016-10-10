@@ -32,6 +32,25 @@ src="https://www.facebook.com/tr?id=1105825709482879&ev=PageView&noscript=1"
   <div class="container">
     <h1>Reserve your Playtable today</h1>
     <p><a href="{% url "/checkout.html" %}">Reserve for $99</a></p>
+    <p>
+    <form action="https://reserve.playtable.xyz/charge" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js"
+    class="stripe-button"
+    data-key="pk_live_xQ2fYNh0HYepIrkFgBmOJjwX"
+    data-image="https://daks2k3a4ib2z.cloudfront.net/56984253d9729c455c79b1aa/56afc0e25b54d73e04b38436_64.png"
+    data-name="Reserve your Playtable Pro"
+    data-description="Get 15% off your Playtable!"
+    data-amount="99"
+    data-label="Reserve Now"
+    data-panel-label="Reserve for {{amount}}">
+  </script>
+  <input type="hidden" name="price" value="99"/>
+  <input type="hidden" name="sku" value="playtable-pro"/>
+  <input type="hidden" name="skuName" value="Playtable Pro"/>
+  <input type="hidden" name="ref" value="reserve"/>
+</form>
+    </p>
   </div>
 </div>
 {% endblock %}
