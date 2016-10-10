@@ -46,7 +46,10 @@ src="https://www.facebook.com/tr?id=1105825709482879&ev=PageView&noscript=1"
 <!-- End Facebook Pixel Code -->
 
 <!-- MIXPANEL -->
-<script>mixpanel.track("checkout",{"price":99});</script>
+<script>
+trackingInfo["price"] = 99;
+mixpanel.track("checkout",trackingInfo);
+</script>
 {% endblock %}
 
 {% block body %}

@@ -68,5 +68,7 @@ ref=tgt_adv_XS000000
 
 // Facebook Ad Clickthru
 
-https://get.flok.com/v18-loyalty-app?utm_source=Facebook&utm_campaign=V66_DF_RHS_Pricing_FlatPhonePur_6048533200145
+https://get.flok.com/v18-loyalty-app
+?utm_source=Facebook
+&utm_campaign=V66_DF_RHS_Pricing_FlatPhonePur_6048533200145
 

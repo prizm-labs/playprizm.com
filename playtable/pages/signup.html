@@ -47,7 +47,10 @@ src="https://www.facebook.com/tr?id=1105825709482879&ev=PageView&noscript=1"
 {% endblock %}
 
 {% block body %}
-<script>mixpanel.track("signup",{"email":"example@text.com"});</script>
+<script>
+trackingInfo["email"] = "example@text.com";
+mixpanel.track("signup",trackingInfo);
+</script>
 <div class="jumbotron">
   <div class="container">
     <h1>Thanks for subscribing to our email list!</h1>

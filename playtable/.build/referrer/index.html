@@ -31,55 +31,6 @@ mixpanel.init("87290bc0165c3e5bfbd8d56a03ea9c56");</script><!-- end Mixpanel -->
     <script src="/static/js/bundle.js"></script>
     <!-- END -->
     
-<!-- Google Code for Reserve Checkout Conversion Page -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 879126850;
-var google_conversion_language = "en";
-var google_conversion_format = "1";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "0-K7CIqdiWkQwtKZowM";
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/879126850/?label=0-K7CIqdiWkQwtKZowM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-
-
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1105825709482879', {
-em: 'insert_email_variable,'
-});
-
-fbq('track', 'PageView');
-// fbq('track', 'Lead');
-// fbq('track', 'AddToCart');
-// fbq('track', 'InitiateCheckout');
-fbq('track', 'Purchase', {value: '99.00', currency: 'USD'});
-// fbq('track', 'CompleteRegistration');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1105825709482879&ev=PageView&noscript=1"
-/></noscript>
-<!-- DO NOT MODIFY -->
-<!-- End Facebook Pixel Code -->
-
-<!-- MIXPANEL -->
-<script>
-trackingInfo["price"] = 99;
-mixpanel.track("checkout",trackingInfo);
-</script>
  
     </head>
 
@@ -127,11 +78,62 @@ mixpanel.track("checkout",trackingInfo);
     </div>
 
     
-<div class="jumbotron">
-  <div class="container">
-    <h1>Thank you for reserving a Playtable FB</h1>
-  </div>
-</div>
+<script>
+clearTracking();
+var emailOpenEventData = {
+  "event": "email_open",
+  "properties":{
+  "token":"87290bc0165c3e5bfbd8d56a03ea9c56",
+  "ref_channel":"aweber",
+  "campaign":"opencart-1"
+  }
+};
+
+var emailClickEventData = {
+  "event": "email_click",
+  "properties":{
+  "token":"87290bc0165c3e5bfbd8d56a03ea9c56",
+  "ref_channel":"aweber",
+  "campaign":"opencart-1"
+  }
+};
+
+function objToBase64Str(obj) {
+  return Base64.encode(JSON.stringify(obj));
+}
+var emailOpenEventString = objToBase64Str(emailOpenEventData);
+emailOpenEventString = "http://api.mixpanel.com/track/?data="+emailOpenEventString+"&img=1";
+
+var redirectURL = "http://localhost:8000/?rc=1";
+
+var emailClickEventString = objToBase64Str(emailClickEventData);
+emailClickEventString = "http://api.mixpanel.com/track/?data="+emailClickEventString + "&redirect=" + encodeURIComponent(redirectURL);
+
+console.log(emailOpenEventString);
+console.log(emailClickEventString);
+
+</script>
+<p>
+<a href="/">Unknown to home</a>
+</p>
+<p>
+  <img src="http://api.mixpanel.com/track/?data=eyJldmVudCI6ImVtYWlsX29wZW4iLCJwcm9wZXJ0aWVzIjp7InRva2VuIjoiODcyOTBiYzAxNjVjM2U1YmZiZDhkNTZhMDNlYTljNTYiLCJyZWZfY2hhbm5lbCI6ImF3ZWJlciIsImNhbXBhaWduIjoib3BlbmNhcnQtMSJ9fQ==&img=1"/>
+  <a href="http://api.mixpanel.com/track/?data=eyJldmVudCI6ImVtYWlsX2NsaWNrIiwicHJvcGVydGllcyI6eyJ0b2tlbiI6Ijg3MjkwYmMwMTY1YzNlNWJmYmQ4ZDU2YTAzZWE5YzU2IiwicmVmX2NoYW5uZWwiOiJhd2ViZXIiLCJjYW1wYWlnbiI6Im9wZW5jYXJ0LTEifX0=&redirect=http%3A%2F%2Flocalhost%3A8000%2F%3Frc%3D1">Aweber email click to home</a>
+  <a href="/?rc=1">Aweber to home</a>
+</p>
+
+<p>
+  <a href="/?rc=2">Facebook ad to home</a>
+</p>
+
+<p>
+  <a href="/?rc=3">Google ad to home</a>
+</p>
+
+<p>
+  <a href="/?rc=4">BGG ad to home</a>
+</p>
+
 
 
     <script src="/static/js/vendor/jquery-1.10.1.js"></script>
