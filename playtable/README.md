@@ -3,6 +3,14 @@ browserify static/js/referrer.js -o static/js/bundle.js
 
 
 
+URL ENCODE ONLINE TOOL:
+http://www.url-encode-decode.com/
+
+
+BASE64 ENCODE ONLINE TOOL:
+https://www.base64encode.org/
+
+
 http://api.mixpanel.com/track/?data=
 
 

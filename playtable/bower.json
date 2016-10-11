@@ -1,0 +1,7 @@
+{
+  "name": "playtable-marketing-services",
+  "dependencies": {
+    "card": "~2.0.3",
+    "jquery.payment": "~3.0.0"
+  }
+}

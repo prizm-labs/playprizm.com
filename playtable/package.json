@@ -1,0 +1,8 @@
+{
+  "name": "playtable-marketing-services",
+  "dependencies": {
+    "browser-cookies": "^1.0.8",
+    "js-base64": "^2.1.9",
+    "query-string": "^4.2.3"
+  }
+}
