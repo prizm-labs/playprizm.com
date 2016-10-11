@@ -147,14 +147,14 @@ src="https://www.facebook.com/tr?id=1105825709482879&ev=PageView&noscript=1"
                         <div class="small-3 columns">
                             <div class="form-group">
                             <label for="cc-exp" class="control-label">Expiry</label>
-                           <input name="expiry" id="cc-exp" type="tel" class="cc-exp" autocomplete="cc-exp" placeholder="MM / YYYY" data-stripe="exp" required>
+                           <input id="cc-exp" type="tel" class="cc-exp" autocomplete="cc-exp" placeholder="MM / YYYY" data-stripe="exp" required>
                            </div>
                         </div>
 
                         <div class="small-3 columns">
                              <div class="form-group">
                             <label for="cc-cvc" class="control-label">CVC</label>
-                            <input name="cvc" id="cc-cvc" type="tel" class="cc-cvc" autocomplete="off" placeholder="•••" data-stripe="cvc" required>
+                            <input id="cc-cvc" type="tel" class="cc-cvc" autocomplete="off" placeholder="•••" data-stripe="cvc" required>
                             </div>
                         </div>
 
@@ -204,7 +204,10 @@ src="https://www.facebook.com/tr?id=1105825709482879&ev=PageView&noscript=1"
       
       // Restrict the input values according to the field type
       $('.cc-zip').payment('restrictNumeric');
-      $('.cc-number').payment('formatCardNumber');
+
+      // TODO: prevent conflict between card.js and payment.js
+      // $('.cc-number').payment('formatCardNumber');
+      
       $('.cc-exp').payment('formatCardExpiry');
       $('.cc-cvc').payment('formatCardCVC');
 
